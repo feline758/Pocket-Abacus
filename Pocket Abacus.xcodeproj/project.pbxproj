@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		201943282BE32EDB000F6D04 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201943272BE32EDB000F6D04 /* HintView.swift */; };
 		20298B552BE084AA00CF2691 /* FrontPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20298B542BE084AA00CF2691 /* FrontPageView.swift */; };
-		2068F80D2BDF31AF004DA164 /* Front Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068F80C2BDF31AF004DA164 /* Front Page.swift */; };
 		20E1DBB22BDB44ED00B865EE /* Pocket_AbacusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E1DBB12BDB44ED00B865EE /* Pocket_AbacusApp.swift */; };
 		20E1DBB42BDB44ED00B865EE /* FreeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E1DBB32BDB44ED00B865EE /* FreeModeView.swift */; };
 		20E1DBB62BDB44EF00B865EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E1DBB52BDB44EF00B865EE /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		201943272BE32EDB000F6D04 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		20298B542BE084AA00CF2691 /* FrontPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageView.swift; sourceTree = "<group>"; };
-		2068F80C2BDF31AF004DA164 /* Front Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Front Page.swift"; sourceTree = "<group>"; };
 		20E1DBAE2BDB44ED00B865EE /* Pocket Abacus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Abacus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E1DBB12BDB44ED00B865EE /* Pocket_AbacusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_AbacusApp.swift; sourceTree = "<group>"; };
 		20E1DBB32BDB44ED00B865EE /* FreeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeModeView.swift; sourceTree = "<group>"; };
@@ -41,8 +39,6 @@
 		20E1DBA52BDB44ED00B865EE = {
 			isa = PBXGroup;
 			children = (
-				201943272BE32EDB000F6D04 /* HintView.swift */,
-				2068F80C2BDF31AF004DA164 /* Front Page.swift */,
 				20E1DBB02BDB44ED00B865EE /* Pocket Abacus */,
 				20E1DBAF2BDB44ED00B865EE /* Products */,
 			);
@@ -62,6 +58,7 @@
 				20E1DBB12BDB44ED00B865EE /* Pocket_AbacusApp.swift */,
 				20E1DBB32BDB44ED00B865EE /* FreeModeView.swift */,
 				20298B542BE084AA00CF2691 /* FrontPageView.swift */,
+				201943272BE32EDB000F6D04 /* HintView.swift */,
 				20E1DBB52BDB44EF00B865EE /* Assets.xcassets */,
 				20E1DBB72BDB44EF00B865EE /* Preview Content */,
 			);
@@ -149,7 +146,6 @@
 				20E1DBB42BDB44ED00B865EE /* FreeModeView.swift in Sources */,
 				201943282BE32EDB000F6D04 /* HintView.swift in Sources */,
 				20E1DBB22BDB44ED00B865EE /* Pocket_AbacusApp.swift in Sources */,
-				2068F80D2BDF31AF004DA164 /* Front Page.swift in Sources */,
 				20298B552BE084AA00CF2691 /* FrontPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
