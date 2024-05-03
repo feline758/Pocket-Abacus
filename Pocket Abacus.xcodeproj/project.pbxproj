@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		201943282BE32EDB000F6D04 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201943272BE32EDB000F6D04 /* HintView.swift */; };
+		2019432C2BE33D63000F6D04 /* RelaxModeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019432B2BE33D63000F6D04 /* RelaxModeView1.swift */; };
+		2019432E2BE34085000F6D04 /* HintRelaxView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019432D2BE34085000F6D04 /* HintRelaxView1.swift */; };
+		201943302BE34552000F6D04 /* HintRelaxView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019432F2BE34552000F6D04 /* HintRelaxView2.swift */; };
+		201943362BE34D12000F6D04 /* RelaxModeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201943352BE34D12000F6D04 /* RelaxModeView2.swift */; };
+		201943382BE35D9D000F6D04 /* HintRelaxView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201943372BE35D9D000F6D04 /* HintRelaxView3.swift */; };
 		20298B552BE084AA00CF2691 /* FrontPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20298B542BE084AA00CF2691 /* FrontPageView.swift */; };
+		2077A4042BE36FFF00BB6DD3 /* HintFreeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077A4032BE36FFF00BB6DD3 /* HintFreeView1.swift */; };
+		2077A4062BE3701000BB6DD3 /* HintFreeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077A4052BE3701000BB6DD3 /* HintFreeView2.swift */; };
+		2077A4082BE3702000BB6DD3 /* HintFreeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077A4072BE3702000BB6DD3 /* HintFreeView3.swift */; };
+		2079C0D62BE48858003BA456 /* SplashPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2079C0D52BE48858003BA456 /* SplashPageView.swift */; };
+		2079C0D82BE497EB003BA456 /* transparentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2079C0D72BE497EB003BA456 /* transparentView.swift */; };
 		20E1DBB22BDB44ED00B865EE /* Pocket_AbacusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E1DBB12BDB44ED00B865EE /* Pocket_AbacusApp.swift */; };
 		20E1DBB42BDB44ED00B865EE /* FreeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E1DBB32BDB44ED00B865EE /* FreeModeView.swift */; };
 		20E1DBB62BDB44EF00B865EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E1DBB52BDB44EF00B865EE /* Assets.xcassets */; };
@@ -16,8 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		201943272BE32EDB000F6D04 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
+		2019432B2BE33D63000F6D04 /* RelaxModeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxModeView1.swift; sourceTree = "<group>"; };
+		2019432D2BE34085000F6D04 /* HintRelaxView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintRelaxView1.swift; sourceTree = "<group>"; };
+		2019432F2BE34552000F6D04 /* HintRelaxView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintRelaxView2.swift; sourceTree = "<group>"; };
+		201943352BE34D12000F6D04 /* RelaxModeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxModeView2.swift; sourceTree = "<group>"; };
+		201943372BE35D9D000F6D04 /* HintRelaxView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintRelaxView3.swift; sourceTree = "<group>"; };
 		20298B542BE084AA00CF2691 /* FrontPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageView.swift; sourceTree = "<group>"; };
+		2077A4032BE36FFF00BB6DD3 /* HintFreeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintFreeView1.swift; sourceTree = "<group>"; };
+		2077A4052BE3701000BB6DD3 /* HintFreeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintFreeView2.swift; sourceTree = "<group>"; };
+		2077A4072BE3702000BB6DD3 /* HintFreeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintFreeView3.swift; sourceTree = "<group>"; };
+		2079C0D52BE48858003BA456 /* SplashPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageView.swift; sourceTree = "<group>"; };
+		2079C0D72BE497EB003BA456 /* transparentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transparentView.swift; sourceTree = "<group>"; };
 		20E1DBAE2BDB44ED00B865EE /* Pocket Abacus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Abacus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E1DBB12BDB44ED00B865EE /* Pocket_AbacusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_AbacusApp.swift; sourceTree = "<group>"; };
 		20E1DBB32BDB44ED00B865EE /* FreeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeModeView.swift; sourceTree = "<group>"; };
@@ -56,9 +74,18 @@
 			isa = PBXGroup;
 			children = (
 				20E1DBB12BDB44ED00B865EE /* Pocket_AbacusApp.swift */,
+				2079C0D52BE48858003BA456 /* SplashPageView.swift */,
 				20E1DBB32BDB44ED00B865EE /* FreeModeView.swift */,
 				20298B542BE084AA00CF2691 /* FrontPageView.swift */,
-				201943272BE32EDB000F6D04 /* HintView.swift */,
+				2019432B2BE33D63000F6D04 /* RelaxModeView1.swift */,
+				201943352BE34D12000F6D04 /* RelaxModeView2.swift */,
+				2019432D2BE34085000F6D04 /* HintRelaxView1.swift */,
+				2019432F2BE34552000F6D04 /* HintRelaxView2.swift */,
+				201943372BE35D9D000F6D04 /* HintRelaxView3.swift */,
+				2077A4032BE36FFF00BB6DD3 /* HintFreeView1.swift */,
+				2077A4052BE3701000BB6DD3 /* HintFreeView2.swift */,
+				2077A4072BE3702000BB6DD3 /* HintFreeView3.swift */,
+				2079C0D72BE497EB003BA456 /* transparentView.swift */,
 				20E1DBB52BDB44EF00B865EE /* Assets.xcassets */,
 				20E1DBB72BDB44EF00B865EE /* Preview Content */,
 			);
@@ -143,10 +170,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201943302BE34552000F6D04 /* HintRelaxView2.swift in Sources */,
+				2019432E2BE34085000F6D04 /* HintRelaxView1.swift in Sources */,
+				2077A4042BE36FFF00BB6DD3 /* HintFreeView1.swift in Sources */,
 				20E1DBB42BDB44ED00B865EE /* FreeModeView.swift in Sources */,
-				201943282BE32EDB000F6D04 /* HintView.swift in Sources */,
+				201943382BE35D9D000F6D04 /* HintRelaxView3.swift in Sources */,
 				20E1DBB22BDB44ED00B865EE /* Pocket_AbacusApp.swift in Sources */,
+				201943362BE34D12000F6D04 /* RelaxModeView2.swift in Sources */,
+				2077A4082BE3702000BB6DD3 /* HintFreeView3.swift in Sources */,
 				20298B552BE084AA00CF2691 /* FrontPageView.swift in Sources */,
+				2077A4062BE3701000BB6DD3 /* HintFreeView2.swift in Sources */,
+				2079C0D82BE497EB003BA456 /* transparentView.swift in Sources */,
+				2079C0D62BE48858003BA456 /* SplashPageView.swift in Sources */,
+				2019432C2BE33D63000F6D04 /* RelaxModeView1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

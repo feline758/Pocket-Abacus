@@ -9,10 +9,38 @@ import SwiftUI
 
 struct HintFreeView3: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+     
+            Spacer()
+            Spacer()
+            Spacer()
+            Text("Small Friends")
+                .foregroundColor(.white)
+                .font(.title2)
+            Text("Here's a list of small friends")
+                .foregroundColor(.white)
+            Spacer()
+            Spacer()
+            Spacer()
+            Image("smallFriends")
+            Spacer()
+            Spacer()
+            Spacer()
+            
+            NavigationLink(destination:FreeModeView()) {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .cornerRadius(20)
+                    Text("OK")
+                        .foregroundColor(.black)
+                }
+            }
+            
+        }.background(.black)
     }
 }
 
-#Preview {
+#Preview (traits: .landscapeRight){
     HintFreeView3()
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct Pocket_AbacusApp: App {
     var body: some Scene {
         WindowGroup {
-            FrontPageView()
+            SplashPageView()
         }
     }
 }

@@ -11,7 +11,6 @@ import SwiftUI
 
 struct FreeModeView: View {
     
-    @State var indikatorSempoa:Int = 0
     
     //beads nilai 5, start dri kiri atas::
     @State var warnaawalbeadsatas1 = "beadsAbu"
@@ -153,10 +152,12 @@ struct FreeModeView: View {
                         .foregroundColor(.white)
                 }
                 Spacer()
-                Image(systemName: "questionmark.circle.fill")
-                    .foregroundColor(.white)
-                    .frame(height:30)
-                    .font(.system(size:35))
+                NavigationLink(destination:HintFreeView1()) {
+                    Image(systemName: "questionmark.circle.fill")
+                        .foregroundColor(.white)
+                        .frame(height:30)
+                        .font(.system(size:35))
+                }
             }
             Spacer()
             HStack {
@@ -164,6 +165,134 @@ struct FreeModeView: View {
                     Image(systemName: "arrow.circlepath")
                         .foregroundColor(.white)
                         .font(.system(size:35))
+                        .onTapGesture {
+                            
+                            // KOLOM 1
+                            valuePosisi1 = 0
+                            
+                            posisiawal_beadsatas1 = 60.0
+                            warnaawalbeadsatas1 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah1 = 185.0
+                            warnaawalbeadsbawah1 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah11 = 215.0
+                            warnaawalbeadsbawah11 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah111 = 245.0
+                            warnaawalbeadsbawah111 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah1111 = 275.0
+                            warnaawalbeadsbawah1111 = "beadsAbu"
+                            
+                            // KOLOM 2
+                            valuePosisi2 = 0
+                            
+                            posisiawal_beadsatas2 = 60.0
+                            warnaawalbeadsatas2 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah2 = 185.0
+                            warnaawalbeadsbawah2 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah22 = 215.0
+                            warnaawalbeadsbawah22 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah222 = 245.0
+                            warnaawalbeadsbawah222 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah2222 = 275.0
+                            warnaawalbeadsbawah2222 = "beadsAbu"
+                            
+                            // KOLOM 3
+                            valuePosisi3 = 0
+                            
+                            posisiawal_beadsatas3 = 60.0
+                            warnaawalbeadsatas3 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah3 = 185.0
+                            warnaawalbeadsbawah3 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah33 = 215.0
+                            warnaawalbeadsbawah33 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah333 = 245.0
+                            warnaawalbeadsbawah333 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah3333 = 275.0
+                            warnaawalbeadsbawah3333 = "beadsAbu"
+                            
+                            // KOLOM 4
+                            valuePosisi4 = 0
+                            
+                            posisiawal_beadsatas4 = 60.0
+                            warnaawalbeadsatas4 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah4 = 185.0
+                            warnaawalbeadsbawah4 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah44 = 215.0
+                            warnaawalbeadsbawah44 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah444 = 245.0
+                            warnaawalbeadsbawah444 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah4444 = 275.0
+                            warnaawalbeadsbawah4444 = "beadsAbu"
+                            
+                            // KOLOM 5
+                            valuePosisi5 = 0
+                            
+                            posisiawal_beadsatas5 = 60.0
+                            warnaawalbeadsatas5 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah5 = 185.0
+                            warnaawalbeadsbawah5 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah55 = 215.0
+                            warnaawalbeadsbawah55 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah555 = 245.0
+                            warnaawalbeadsbawah555 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah5555 = 275.0
+                            warnaawalbeadsbawah5555 = "beadsAbu"
+                            
+                            // KOLOM 6
+                            valuePosisi6 = 0
+                            
+                            posisiawal_beadsatas6 = 60.0
+                            warnaawalbeadsatas6 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah6 = 185.0
+                            warnaawalbeadsbawah6 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah66 = 215.0
+                            warnaawalbeadsbawah66 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah666 = 245.0
+                            warnaawalbeadsbawah666 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah6666 = 275.0
+                            warnaawalbeadsbawah6666 = "beadsAbu"
+                            
+                            // KOLOM 7
+                            valuePosisi7 = 0
+                            
+                            posisiawal_beadsatas7 = 60.0
+                            warnaawalbeadsatas7 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah7 = 185.0
+                            warnaawalbeadsbawah7 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah77 = 215.0
+                            warnaawalbeadsbawah77 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah777 = 245.0
+                            warnaawalbeadsbawah777 = "beadsAbu"
+                            
+                            posisiawal_beadsbawah7777 = 275.0
+                            warnaawalbeadsbawah7777 = "beadsAbu"
+                        }
                     Text("Reset")
                         .foregroundColor(.white)
                 }
@@ -290,6 +419,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah6 = 185 } else { warnaawalbeadsbawah6 = "beadsKuning"
                                     posisiawal_beadsbawah6 = 140
                                 }
+                            calculateBeads(position: 6)
                         }
                     Image(warnaawalbeadsbawah66)
                         .resizable()
@@ -302,6 +432,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah66 = 215 } else { warnaawalbeadsbawah66 = "beadsKuning"
                                     posisiawal_beadsbawah66 = 170
                                 }
+                            calculateBeads(position: 6)
                         }
                     Image(warnaawalbeadsbawah666)
                         .resizable()
@@ -314,6 +445,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah666 = 245 } else { warnaawalbeadsbawah666 = "beadsKuning"
                                     posisiawal_beadsbawah666 = 200
                                 }
+                            calculateBeads(position: 6)
                         }
                     Image(warnaawalbeadsbawah6666)
                         .resizable()
@@ -326,6 +458,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah6666 = 275 } else { warnaawalbeadsbawah6666 = "beadsKuning"
                                     posisiawal_beadsbawah6666 = 230
                                 }
+                            calculateBeads(position: 6)
                         }
                     
                     
@@ -344,6 +477,7 @@ struct FreeModeView: View {
                                 warnaawalbeadsatas6 = "beadsKuning"
                                 posisiawal_beadsatas6 = 95
                             }
+                            calculateBeads(position: 6)
                         }
                     
                     
@@ -360,6 +494,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah5 = 185 } else { warnaawalbeadsbawah5 = "beadsKuning"
                                     posisiawal_beadsbawah5 = 140
                                 }
+                            calculateBeads(position: 5)
                         }
                     Image(warnaawalbeadsbawah55)
                         .resizable()
@@ -372,6 +507,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah55 = 215 } else { warnaawalbeadsbawah55 = "beadsKuning"
                                     posisiawal_beadsbawah55 = 170
                                 }
+                            calculateBeads(position: 5)
                         }
                     Image(warnaawalbeadsbawah555)
                         .resizable()
@@ -384,6 +520,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah555 = 245 } else { warnaawalbeadsbawah555 = "beadsKuning"
                                     posisiawal_beadsbawah555 = 200
                                 }
+                            calculateBeads(position: 5)
                         }
                     Image(warnaawalbeadsbawah5555)
                         .resizable()
@@ -396,6 +533,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah5555 = 275 } else { warnaawalbeadsbawah5555 = "beadsKuning"
                                     posisiawal_beadsbawah5555 = 230
                                 }
+                            calculateBeads(position: 5)
                         }
                     
                     Image(warnaawalbeadsatas5)
@@ -413,6 +551,7 @@ struct FreeModeView: View {
                                 warnaawalbeadsatas5 = "beadsKuning"
                                 posisiawal_beadsatas5 = 95
                             }
+                            calculateBeads(position: 5)
                         }
                     
                     
@@ -429,6 +568,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah4 = 185 } else { warnaawalbeadsbawah4 = "beadsKuning"
                                     posisiawal_beadsbawah4 = 140
                                 }
+                            calculateBeads(position: 4)
                         }
                     Image(warnaawalbeadsbawah44)
                         .resizable()
@@ -441,6 +581,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah44 = 215 } else { warnaawalbeadsbawah44 = "beadsKuning"
                                     posisiawal_beadsbawah44 = 170
                                 }
+                            calculateBeads(position: 4)
                         }
                     Image(warnaawalbeadsbawah444)
                         .resizable()
@@ -453,6 +594,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah444 = 245 } else { warnaawalbeadsbawah444 = "beadsKuning"
                                     posisiawal_beadsbawah444 = 200
                                 }
+                            calculateBeads(position: 4)
                         }
                     Image(warnaawalbeadsbawah4444)
                         .resizable()
@@ -465,6 +607,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah4444 = 275 } else { warnaawalbeadsbawah4444 = "beadsKuning"
                                     posisiawal_beadsbawah4444 = 230
                                 }
+                            calculateBeads(position: 4)
                         }
                     
                     Image(warnaawalbeadsatas4)
@@ -482,6 +625,7 @@ struct FreeModeView: View {
                                 warnaawalbeadsatas4 = "beadsKuning"
                                 posisiawal_beadsatas4 = 95
                             }
+                            calculateBeads(position: 4)
                         }
                     
                     
@@ -495,9 +639,10 @@ struct FreeModeView: View {
                         .onTapGesture {
                             if warnaawalbeadsbawah3 == "beadsKuning" {
                                 warnaawalbeadsbawah3 = "beadsAbu"
-                                posisiawal_beadsbawah3 = 265 } else { warnaawalbeadsbawah3 = "beadsKuning"
+                                posisiawal_beadsbawah3 = 185 } else { warnaawalbeadsbawah3 = "beadsKuning"
                                     posisiawal_beadsbawah3 = 140
                                 }
+                            calculateBeads(position: 3)
                         }
                     Image(warnaawalbeadsbawah33)
                         .resizable()
@@ -507,9 +652,10 @@ struct FreeModeView: View {
                         .onTapGesture {
                             if warnaawalbeadsbawah33 == "beadsKuning" {
                                 warnaawalbeadsbawah33 = "beadsAbu"
-                                posisiawal_beadsbawah33 = 265 } else { warnaawalbeadsbawah33 = "beadsKuning"
+                                posisiawal_beadsbawah33 = 215 } else { warnaawalbeadsbawah33 = "beadsKuning"
                                     posisiawal_beadsbawah33 = 170
                                 }
+                            calculateBeads(position: 3)
                         }
                     Image(warnaawalbeadsbawah333)
                         .resizable()
@@ -519,9 +665,10 @@ struct FreeModeView: View {
                         .onTapGesture {
                             if warnaawalbeadsbawah333 == "beadsKuning" {
                                 warnaawalbeadsbawah333 = "beadsAbu"
-                                posisiawal_beadsbawah333 = 265 } else { warnaawalbeadsbawah333 = "beadsKuning"
+                                posisiawal_beadsbawah333 = 245 } else { warnaawalbeadsbawah333 = "beadsKuning"
                                     posisiawal_beadsbawah333 = 200
                                 }
+                            calculateBeads(position: 3)
                         }
                     Image(warnaawalbeadsbawah3333)
                         .resizable()
@@ -531,9 +678,10 @@ struct FreeModeView: View {
                         .onTapGesture {
                             if warnaawalbeadsbawah3333 == "beadsKuning" {
                                 warnaawalbeadsbawah3333 = "beadsAbu"
-                                posisiawal_beadsbawah3333 = 265 } else { warnaawalbeadsbawah3333 = "beadsKuning"
+                                posisiawal_beadsbawah3333 = 275 } else { warnaawalbeadsbawah3333 = "beadsKuning"
                                     posisiawal_beadsbawah3333 = 230
                                 }
+                            calculateBeads(position: 3)
                         }
                     
                     Image(warnaawalbeadsatas3)
@@ -551,6 +699,7 @@ struct FreeModeView: View {
                                 warnaawalbeadsatas3 = "beadsKuning"
                                 posisiawal_beadsatas3 = 95
                             }
+                            calculateBeads(position: 3)
                         }
                     
                     
@@ -567,6 +716,7 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah2 = 185 } else { warnaawalbeadsbawah2 = "beadsKuning"
                                     posisiawal_beadsbawah2 = 140
                                 }
+                            calculateBeads(position: 2)
                         }
                     Image(warnaawalbeadsbawah22)
                         .resizable()
@@ -579,6 +729,8 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah22 = 215 } else { warnaawalbeadsbawah22 = "beadsKuning"
                                     posisiawal_beadsbawah22 = 170
                                 }
+                            calculateBeads(position: 2)
+
                         }
                     Image(warnaawalbeadsbawah222)
                         .resizable()
@@ -591,6 +743,8 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah222 = 245 } else { warnaawalbeadsbawah222 = "beadsKuning"
                                     posisiawal_beadsbawah222 = 200
                                 }
+                            calculateBeads(position: 2)
+
                         }
                     Image(warnaawalbeadsbawah2222)
                         .resizable()
@@ -603,6 +757,8 @@ struct FreeModeView: View {
                                 posisiawal_beadsbawah2222 = 275 } else { warnaawalbeadsbawah2222 = "beadsKuning"
                                     posisiawal_beadsbawah2222 = 230
                                 }
+                            calculateBeads(position: 2)
+
                         }
                     
                     Image(warnaawalbeadsatas2)
@@ -620,6 +776,7 @@ struct FreeModeView: View {
                                 warnaawalbeadsatas2 = "beadsKuning"
                                 posisiawal_beadsatas2 = 95
                             }
+                            calculateBeads(position: 2)
                         }
                     
                     //KOLOM 1
@@ -715,6 +872,9 @@ struct FreeModeView: View {
         
     }
     
+
+    
+//    FUNCTION BUAT CEK nilai beads, ditaruh di setiap on tap beads
     
     func calculateBeads(position: Int) {
         var value = 0
@@ -741,38 +901,145 @@ struct FreeModeView: View {
             
             valuePosisi1 = value
         } else if position == 2 {
+            if warnaawalbeadsatas2 == "beadsKuning" {
+                value += 5
+            }
+            
+            if warnaawalbeadsbawah2 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah22 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah222 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah2222 == "beadsKuning" {
+                value += 1
+            }
+            
+            valuePosisi2 = value
             
         } else if position == 3 {
+            if warnaawalbeadsatas3 == "beadsKuning" {
+                value += 5
+            }
+            
+            if warnaawalbeadsbawah3 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah33 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah333 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah3333 == "beadsKuning" {
+                value += 1
+            }
+            
+            valuePosisi3 = value
             
         } else if position == 4 {
+            if warnaawalbeadsatas4 == "beadsKuning" {
+                value += 5
+            }
+            
+            if warnaawalbeadsbawah4 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah44 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah444 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah4444 == "beadsKuning" {
+                value += 1
+            }
+            
+            valuePosisi4 = value
             
         } else if position == 5 {
+            if warnaawalbeadsatas5 == "beadsKuning" {
+                value += 5
+            }
             
+            if warnaawalbeadsbawah5 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah55 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah555 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah5555 == "beadsKuning" {
+                value += 1
+            }
+            
+            valuePosisi5 = value
         } else if position == 6 {
+            if warnaawalbeadsatas6 == "beadsKuning" {
+                value += 5
+            }
+            
+            if warnaawalbeadsbawah6 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah66 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah666 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah6666 == "beadsKuning" {
+                value += 1
+            }
+            
+            valuePosisi6 = value
             
         } else if position == 7 {
+            if warnaawalbeadsatas7 == "beadsKuning" {
+                value += 5
+            }
+            
+            if warnaawalbeadsbawah7 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah77 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah777 == "beadsKuning" {
+                value += 1
+            }
+            
+            if warnaawalbeadsbawah7777 == "beadsKuning" {
+                value += 1
+            }
+            
+            valuePosisi7 = value
             
         }
     }
 }
-
-
-
-//func beadSempoa1 {
-
-
-
-//func beadSempoa5 {
-
-
-
-//func labelSempoa {
-
-
-//Image("beadsKuning")
-//.resizable
-//.scaledToFit
-
 
 #Preview (traits: . landscapeRight){
     FreeModeView()

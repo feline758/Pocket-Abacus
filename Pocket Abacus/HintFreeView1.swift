@@ -9,10 +9,41 @@ import SwiftUI
 
 struct HintFreeView1: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Spacer()
+            Text ("Counting")
+                .foregroundColor(.white)
+                .font(.title2)
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+       
+            
+            Image("Hint1")
+            
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            NavigationLink(destination:HintFreeView2()) {
+                ZStack {
+                    Rectangle()
+                        .cornerRadius(20)
+                        .foregroundColor(.white)
+                    HStack {
+                        Text("Next")
+                        Image(systemName:"arrow.right")
+                    }.foregroundColor(.black)
+                }
+            }
+        } .background(.black)
     }
 }
 
-#Preview {
+#Preview (traits: .landscapeRight){
     HintFreeView1()
 }

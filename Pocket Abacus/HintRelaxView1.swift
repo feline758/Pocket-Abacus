@@ -19,67 +19,27 @@ struct HintRelaxView1: View {
             Spacer()
             Spacer()
             Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
+        
             
             Image("Hint1")
             
             Spacer()
             Spacer()
             Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            
-            ZStack {
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    NavigationLink (destination: HintView2()) {
-                        Rectangle()
-                            .cornerRadius(20)
-                        .foregroundColor(.white) }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+       
+            NavigationLink(destination:HintRelaxView2()) {
+                ZStack {
+                    Rectangle()
+                        .cornerRadius(20)
+                        .foregroundColor(.white)
+                    HStack {
+                        Text("Next")
+                        Image(systemName:"arrow.right")
+                    }.foregroundColor(.black)
                 }
-                HStack {
-                    Text("Next")
-                    Image(systemName:"arrow.right")
-                }
-               
             }
-        }.background(.black)
+        } .background(.black)
     }
-        
-     
-    
 }
 
 #Preview (traits: .landscapeRight) {

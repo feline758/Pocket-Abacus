@@ -10,10 +10,7 @@ import SwiftUI
 struct HintRelaxView3: View {
     var body: some View {
         VStack {
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
+         
             Spacer()
             Spacer()
             Text("Small Friends")
@@ -28,49 +25,21 @@ struct HintRelaxView3: View {
             Spacer()
             Spacer()
             Spacer()
-            ZStack {
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    NavigationLink (destination: RelaxModeView2()) {
-                        Rectangle()
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
-                    }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                }
+            
+            NavigationLink(destination:RelaxModeView2()) {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .cornerRadius(20)
                     Text("OK")
+                        .foregroundColor(.black)
+                }
             }
+            
         }.background(.black)
+        }
     }
-}
+
 
 #Preview (traits: .landscapeRight){
     HintRelaxView3()

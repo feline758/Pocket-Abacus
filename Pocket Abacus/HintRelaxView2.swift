@@ -10,12 +10,7 @@ import SwiftUI
 struct HintRelaxView2: View {
     var body: some View {
         VStack {
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
+        
             Spacer()
             Spacer()
             Spacer()
@@ -40,53 +35,24 @@ struct HintRelaxView2: View {
             Spacer()
             Spacer()
             Spacer()
-            ZStack {
-                HStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    NavigationLink (destination: HintView3()) {
-                        Rectangle()
-                            .cornerRadius(20)
-                            .foregroundColor(.white)
-                    }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+            
+            NavigationLink(destination:HintRelaxView3()) {
+                ZStack {
+                    
+                    Rectangle()
+                        .cornerRadius(20)
+                        .foregroundColor(.white)
+                    HStack {
+                        Text("Next")
+                        Image(systemName:"arrow.right")
+                    }.foregroundColor(.black)
                 }
-                HStack {
-                    Text("Next")
-                    Image(systemName:"arrow.right")
-                }
-               
             }
         }.background(.black)
+         
+        }
     }
-}
+
 
 #Preview (traits: .landscapeRight){
     HintRelaxView2()
