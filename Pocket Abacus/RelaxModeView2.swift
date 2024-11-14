@@ -11,8 +11,8 @@ struct RelaxModeView2: View {
 
     //    BUAT RANDOMIZE SOAL (integer random in 1..<100)
 //    @State buat kalo var nya muncul di view
-    @State var angkaDepan = Int.random(in:1..<100)
-    @State var angkaBelakang = Int.random(in:1..<100)
+    @State var angkaDepan = Int.random(in:1..<1000)
+    @State var angkaBelakang = Int.random(in:1..<1000)
 
     
     //    variabel buat operator soal, operatornya + doang WWKWKWKKW
@@ -150,7 +150,7 @@ struct RelaxModeView2: View {
     @State var valuePosisi7 = 0
     
 //    Initial condition sebelum jwbannya dicek benar salah, gaada correct page
-    @State var gusdar = false
+    @State var jawabansalah = false
     
     
     var body: some View {
@@ -250,14 +250,32 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:560, y:posisiawal_beadsbawah7)
                             .onTapGesture {
-                                if warnaawalbeadsbawah7 == "beadsKuning" {
+
+//                                KALO beads 1 warna abu, waktu dipencet berubah jdi kuning, posisi naik.
+//                                ELSE IF beads 1 warna kuning, waktu dipencet beads 1-4 ikut berubah jdi abu, posisi turun ke awal.
+                                
+                                if warnaawalbeadsbawah7 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah7 = "beadsKuning"
+                                    posisiawal_beadsbawah7 = 140
+
+                                }else if warnaawalbeadsbawah7 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah7 = "beadsAbu"
-                                    posisiawal_beadsbawah7 = 185 } else { warnaawalbeadsbawah7 = "beadsKuning"
-                                        posisiawal_beadsbawah7 = 140
-                                    }
-                                
+                                    posisiawal_beadsbawah7 = 185
+                                    
+                                    warnaawalbeadsbawah77 = "beadsAbu"
+                                    posisiawal_beadsbawah77 = 215
+                                    
+                                    warnaawalbeadsbawah777 = "beadsAbu"
+                                    posisiawal_beadsbawah777 = 245
+                                    
+                                    warnaawalbeadsbawah7777 = "beadsAbu"
+                                    posisiawal_beadsbawah7777 = 275
+                                    
+                                }
                                 calculateBeads(position: 7)
-                                
+                                cekJawaban()
                             }
                         Image(warnaawalbeadsbawah77)
                             .resizable()
@@ -265,11 +283,26 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:560, y:posisiawal_beadsbawah77)
                             .onTapGesture {
-                                if warnaawalbeadsbawah77 == "beadsKuning" {
+
+                                if warnaawalbeadsbawah77 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah77 = "beadsKuning"
+                                    posisiawal_beadsbawah77 = 170
+                                    
+                                    warnaawalbeadsbawah7 = "beadsKuning"
+                                    posisiawal_beadsbawah7 = 140
+                                }else if warnaawalbeadsbawah77 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah77 = "beadsAbu"
-                                    posisiawal_beadsbawah77 = 215 } else { warnaawalbeadsbawah77 = "beadsKuning"
-                                        posisiawal_beadsbawah77 = 170
-                                    }
+                                    posisiawal_beadsbawah77 = 215
+                                    
+                                    warnaawalbeadsbawah777 = "beadsAbu"
+                                    posisiawal_beadsbawah777 = 245
+                                    
+                                    warnaawalbeadsbawah7777 = "beadsAbu"
+                                    posisiawal_beadsbawah7777 = 275
+                                    
+                                }
                                 calculateBeads(position: 7)
                                 cekJawaban()
                             }
@@ -279,11 +312,26 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:560, y:posisiawal_beadsbawah777)
                             .onTapGesture {
-                                if warnaawalbeadsbawah777 == "beadsKuning" {
+
+                                if warnaawalbeadsbawah777 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah777 = "beadsKuning"
+                                    posisiawal_beadsbawah777 = 200
+                                    
+                                    warnaawalbeadsbawah77 = "beadsKuning"
+                                    posisiawal_beadsbawah77 = 170
+                                    
+                                    warnaawalbeadsbawah7 = "beadsKuning"
+                                    posisiawal_beadsbawah7 = 140
+                                }else if warnaawalbeadsbawah777 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah777 = "beadsAbu"
-                                    posisiawal_beadsbawah777 = 245 } else { warnaawalbeadsbawah777 = "beadsKuning"
-                                        posisiawal_beadsbawah777 = 200
-                                    }
+                                    posisiawal_beadsbawah777 = 245
+                                    
+                                    warnaawalbeadsbawah7777 = "beadsAbu"
+                                    posisiawal_beadsbawah7777 = 275
+                                    
+                                }
                                 calculateBeads(position: 7)
                                 cekJawaban()
                                 
@@ -294,11 +342,26 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:560, y:posisiawal_beadsbawah7777)
                             .onTapGesture {
-                                if warnaawalbeadsbawah7777 == "beadsKuning" {
+//                                KALO warna awal = abu, saat on tap beads 1-4 berubah jdi kuning, posisi berubah jdi naik. ELSE IF on tap waktu beads 4 wrn kuning, beads 4 nya doang yg balik jdi wrn abu, balik ke posisi awal
+                                if warnaawalbeadsbawah7777 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah7777 = "beadsKuning"
+                                    posisiawal_beadsbawah7777 = 230
+                                    
+                                    warnaawalbeadsbawah777 = "beadsKuning"
+                                    posisiawal_beadsbawah777 = 200
+                                    
+                                    warnaawalbeadsbawah77 = "beadsKuning"
+                                    posisiawal_beadsbawah77 = 170
+                                    
+                                    warnaawalbeadsbawah7 = "beadsKuning"
+                                    posisiawal_beadsbawah7 = 140
+                                }else if warnaawalbeadsbawah7777 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah7777 = "beadsAbu"
-                                    posisiawal_beadsbawah7777 = 275 } else { warnaawalbeadsbawah7777 = "beadsKuning"
-                                        posisiawal_beadsbawah7777 = 230
-                                    }
+                                    posisiawal_beadsbawah7777 = 275
+                                    
+                                }
                                 calculateBeads(position: 7)
                                 cekJawaban()
                                 
@@ -334,11 +397,28 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:485, y:posisiawal_beadsbawah6)
                             .onTapGesture {
-                                if warnaawalbeadsbawah6 == "beadsKuning" {
+//                                KALO beads 1 warna abu, waktu dipencet berubah jdi kuning, posisi naik.
+//                                ELSE IF beads 1 warna kuning, waktu dipencet beads 1-4 ikut berubah jdi abu, posisi turun ke awal.
+                                if warnaawalbeadsbawah6 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah6 = "beadsKuning"
+                                    posisiawal_beadsbawah6 = 140
+
+                                }else if warnaawalbeadsbawah6 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah6 = "beadsAbu"
-                                    posisiawal_beadsbawah6 = 185 } else { warnaawalbeadsbawah6 = "beadsKuning"
-                                        posisiawal_beadsbawah6 = 140
-                                    }
+                                    posisiawal_beadsbawah6 = 185
+                                    
+                                    warnaawalbeadsbawah66 = "beadsAbu"
+                                    posisiawal_beadsbawah66 = 215
+                                    
+                                    warnaawalbeadsbawah666 = "beadsAbu"
+                                    posisiawal_beadsbawah666 = 245
+                                    
+                                    warnaawalbeadsbawah6666 = "beadsAbu"
+                                    posisiawal_beadsbawah6666 = 275
+                                    
+                                }
                                 calculateBeads(position: 6)
                                 cekJawaban()
                             }
@@ -348,11 +428,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:485, y:posisiawal_beadsbawah66)
                             .onTapGesture {
-                                if warnaawalbeadsbawah66 == "beadsKuning" {
+                                if warnaawalbeadsbawah66 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah66 = "beadsKuning"
+                                    posisiawal_beadsbawah66 = 170
+                                    
+                                    warnaawalbeadsbawah6 = "beadsKuning"
+                                    posisiawal_beadsbawah6 = 140
+                                }else if warnaawalbeadsbawah66 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah66 = "beadsAbu"
-                                    posisiawal_beadsbawah66 = 215 } else { warnaawalbeadsbawah66 = "beadsKuning"
-                                        posisiawal_beadsbawah66 = 170
-                                    }
+                                    posisiawal_beadsbawah66 = 215
+                                    
+                                    warnaawalbeadsbawah666 = "beadsAbu"
+                                    posisiawal_beadsbawah666 = 245
+                                    
+                                    warnaawalbeadsbawah6666 = "beadsAbu"
+                                    posisiawal_beadsbawah6666 = 275
+                                    
+                                }
                                 calculateBeads(position: 6)
                                 cekJawaban()
                             }
@@ -362,11 +456,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:485, y:posisiawal_beadsbawah666)
                             .onTapGesture {
-                                if warnaawalbeadsbawah666 == "beadsKuning" {
+                                if warnaawalbeadsbawah666 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah666 = "beadsKuning"
+                                    posisiawal_beadsbawah666 = 200
+                                    
+                                    warnaawalbeadsbawah66 = "beadsKuning"
+                                    posisiawal_beadsbawah66 = 170
+                                    
+                                    warnaawalbeadsbawah6 = "beadsKuning"
+                                    posisiawal_beadsbawah6 = 140
+                                }else if warnaawalbeadsbawah666 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah666 = "beadsAbu"
-                                    posisiawal_beadsbawah666 = 245 } else { warnaawalbeadsbawah666 = "beadsKuning"
-                                        posisiawal_beadsbawah666 = 200
-                                    }
+                                    posisiawal_beadsbawah666 = 245
+                                    
+                                    warnaawalbeadsbawah6666 = "beadsAbu"
+                                    posisiawal_beadsbawah6666 = 275
+                                    
+                                }
                                 calculateBeads(position: 6)
                                 cekJawaban()
                             }
@@ -376,11 +484,27 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:485, y:posisiawal_beadsbawah6666)
                             .onTapGesture {
-                                if warnaawalbeadsbawah6666 == "beadsKuning" {
+                                //                                KALO beads 1 warna abu, waktu dipencet berubah jdi kuning, posisi naik.
+                                //                                ELSE IF beads 1 warna kuning, waktu dipencet beads 1-4 ikut berubah jdi abu, posisi turun ke awal.
+                                if warnaawalbeadsbawah6666 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah6666 = "beadsKuning"
+                                    posisiawal_beadsbawah6666 = 230
+                                    
+                                    warnaawalbeadsbawah666 = "beadsKuning"
+                                    posisiawal_beadsbawah666 = 200
+                                    
+                                    warnaawalbeadsbawah66 = "beadsKuning"
+                                    posisiawal_beadsbawah66 = 170
+                                    
+                                    warnaawalbeadsbawah6 = "beadsKuning"
+                                    posisiawal_beadsbawah6 = 140
+                                }else if warnaawalbeadsbawah6666 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah6666 = "beadsAbu"
-                                    posisiawal_beadsbawah6666 = 275 } else { warnaawalbeadsbawah6666 = "beadsKuning"
-                                        posisiawal_beadsbawah6666 = 230
-                                    }
+                                    posisiawal_beadsbawah6666 = 275
+                                    
+                                }
                                 calculateBeads(position: 6)
                                 cekJawaban()
                             }
@@ -414,11 +538,26 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:410, y:posisiawal_beadsbawah5)
                             .onTapGesture {
-                                if warnaawalbeadsbawah5 == "beadsKuning" {
+                                if warnaawalbeadsbawah5 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah5 = "beadsKuning"
+                                    posisiawal_beadsbawah5 = 140
+
+                                }else if warnaawalbeadsbawah5 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah5 = "beadsAbu"
-                                    posisiawal_beadsbawah5 = 185 } else { warnaawalbeadsbawah5 = "beadsKuning"
-                                        posisiawal_beadsbawah5 = 140
-                                    }
+                                    posisiawal_beadsbawah5 = 185
+                                    
+                                    warnaawalbeadsbawah55 = "beadsAbu"
+                                    posisiawal_beadsbawah55 = 215
+                                    
+                                    warnaawalbeadsbawah555 = "beadsAbu"
+                                    posisiawal_beadsbawah555 = 245
+                                    
+                                    warnaawalbeadsbawah5555 = "beadsAbu"
+                                    posisiawal_beadsbawah5555 = 275
+                                    
+                                }
                                 calculateBeads(position: 5)
                                 cekJawaban()
                             }
@@ -428,11 +567,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:410, y:posisiawal_beadsbawah55)
                             .onTapGesture {
-                                if warnaawalbeadsbawah55 == "beadsKuning" {
+                                if warnaawalbeadsbawah55 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah55 = "beadsKuning"
+                                    posisiawal_beadsbawah55 = 170
+                                    
+                                    warnaawalbeadsbawah5 = "beadsKuning"
+                                    posisiawal_beadsbawah5 = 140
+                                }else if warnaawalbeadsbawah55 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah55 = "beadsAbu"
-                                    posisiawal_beadsbawah55 = 215 } else { warnaawalbeadsbawah55 = "beadsKuning"
-                                        posisiawal_beadsbawah55 = 170
-                                    }
+                                    posisiawal_beadsbawah55 = 215
+                                    
+                                    warnaawalbeadsbawah555 = "beadsAbu"
+                                    posisiawal_beadsbawah555 = 245
+                                    
+                                    warnaawalbeadsbawah5555 = "beadsAbu"
+                                    posisiawal_beadsbawah5555 = 275
+                                    
+                                }
                                 calculateBeads(position: 5)
                                 cekJawaban()
                             }
@@ -442,11 +595,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:410, y:posisiawal_beadsbawah555)
                             .onTapGesture {
-                                if warnaawalbeadsbawah555 == "beadsKuning" {
+                                if warnaawalbeadsbawah555 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah555 = "beadsKuning"
+                                    posisiawal_beadsbawah555 = 200
+                                    
+                                    warnaawalbeadsbawah55 = "beadsKuning"
+                                    posisiawal_beadsbawah55 = 170
+                                    
+                                    warnaawalbeadsbawah5 = "beadsKuning"
+                                    posisiawal_beadsbawah5 = 140
+                                }else if warnaawalbeadsbawah555 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah555 = "beadsAbu"
-                                    posisiawal_beadsbawah555 = 245 } else { warnaawalbeadsbawah555 = "beadsKuning"
-                                        posisiawal_beadsbawah555 = 200
-                                    }
+                                    posisiawal_beadsbawah555 = 245
+                                    
+                                    warnaawalbeadsbawah5555 = "beadsAbu"
+                                    posisiawal_beadsbawah5555 = 275
+                                    
+                                }
                                 calculateBeads(position: 5)
                                 cekJawaban()
                             }
@@ -456,11 +623,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:410, y:posisiawal_beadsbawah5555)
                             .onTapGesture {
-                                if warnaawalbeadsbawah5555 == "beadsKuning" {
+                                if warnaawalbeadsbawah5555 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah5555 = "beadsKuning"
+                                    posisiawal_beadsbawah5555 = 230
+                                    
+                                    warnaawalbeadsbawah555 = "beadsKuning"
+                                    posisiawal_beadsbawah555 = 200
+                                    
+                                    warnaawalbeadsbawah55 = "beadsKuning"
+                                    posisiawal_beadsbawah55 = 170
+                                    
+                                    warnaawalbeadsbawah5 = "beadsKuning"
+                                    posisiawal_beadsbawah5 = 140
+                                }else if warnaawalbeadsbawah5555 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah5555 = "beadsAbu"
-                                    posisiawal_beadsbawah5555 = 275 } else { warnaawalbeadsbawah5555 = "beadsKuning"
-                                        posisiawal_beadsbawah5555 = 230
-                                    }
+                                    posisiawal_beadsbawah5555 = 275
+                                    
+                                }
                                 calculateBeads(position: 5)
                                 cekJawaban()
                             }
@@ -493,11 +674,26 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:340, y:posisiawal_beadsbawah4)
                             .onTapGesture {
-                                if warnaawalbeadsbawah4 == "beadsKuning" {
+                                if warnaawalbeadsbawah4 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah4 = "beadsKuning"
+                                    posisiawal_beadsbawah4 = 140
+
+                                }else if warnaawalbeadsbawah4 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah4 = "beadsAbu"
-                                    posisiawal_beadsbawah4 = 185 } else { warnaawalbeadsbawah4 = "beadsKuning"
-                                        posisiawal_beadsbawah4 = 140
-                                    }
+                                    posisiawal_beadsbawah4 = 185
+                                    
+                                    warnaawalbeadsbawah44 = "beadsAbu"
+                                    posisiawal_beadsbawah44 = 215
+                                    
+                                    warnaawalbeadsbawah444 = "beadsAbu"
+                                    posisiawal_beadsbawah444 = 245
+                                    
+                                    warnaawalbeadsbawah4444 = "beadsAbu"
+                                    posisiawal_beadsbawah4444 = 275
+                                    
+                                }
                                 calculateBeads(position: 4)
                                 cekJawaban()
                             }
@@ -507,11 +703,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:340, y:posisiawal_beadsbawah44)
                             .onTapGesture {
-                                if warnaawalbeadsbawah44 == "beadsKuning" {
+                                if warnaawalbeadsbawah44 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah44 = "beadsKuning"
+                                    posisiawal_beadsbawah44 = 170
+                                    
+                                    warnaawalbeadsbawah4 = "beadsKuning"
+                                    posisiawal_beadsbawah4 = 140
+                                }else if warnaawalbeadsbawah44 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah44 = "beadsAbu"
-                                    posisiawal_beadsbawah44 = 215 } else { warnaawalbeadsbawah44 = "beadsKuning"
-                                        posisiawal_beadsbawah44 = 170
-                                    }
+                                    posisiawal_beadsbawah44 = 215
+                                    
+                                    warnaawalbeadsbawah444 = "beadsAbu"
+                                    posisiawal_beadsbawah444 = 245
+                                    
+                                    warnaawalbeadsbawah4444 = "beadsAbu"
+                                    posisiawal_beadsbawah4444 = 275
+                                    
+                                }
                                 calculateBeads(position: 4)
                                 cekJawaban()
                             }
@@ -521,11 +731,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:340, y:posisiawal_beadsbawah444)
                             .onTapGesture {
-                                if warnaawalbeadsbawah444 == "beadsKuning" {
+                                if warnaawalbeadsbawah444 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah444 = "beadsKuning"
+                                    posisiawal_beadsbawah444 = 200
+                                    
+                                    warnaawalbeadsbawah44 = "beadsKuning"
+                                    posisiawal_beadsbawah44 = 170
+                                    
+                                    warnaawalbeadsbawah4 = "beadsKuning"
+                                    posisiawal_beadsbawah4 = 140
+                                }else if warnaawalbeadsbawah444 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah444 = "beadsAbu"
-                                    posisiawal_beadsbawah444 = 245 } else { warnaawalbeadsbawah444 = "beadsKuning"
-                                        posisiawal_beadsbawah444 = 200
-                                    }
+                                    posisiawal_beadsbawah444 = 245
+                                    
+                                    warnaawalbeadsbawah4444 = "beadsAbu"
+                                    posisiawal_beadsbawah4444 = 275
+                                    
+                                }
                                 calculateBeads(position: 4)
                                 cekJawaban()
                             }
@@ -535,11 +759,25 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:340, y:posisiawal_beadsbawah4444)
                             .onTapGesture {
-                                if warnaawalbeadsbawah4444 == "beadsKuning" {
+                                if warnaawalbeadsbawah4444 == "beadsAbu" {
+                                    
+                                    warnaawalbeadsbawah4444 = "beadsKuning"
+                                    posisiawal_beadsbawah4444 = 230
+                                    
+                                    warnaawalbeadsbawah444 = "beadsKuning"
+                                    posisiawal_beadsbawah444 = 200
+                                    
+                                    warnaawalbeadsbawah44 = "beadsKuning"
+                                    posisiawal_beadsbawah44 = 170
+                                    
+                                    warnaawalbeadsbawah4 = "beadsKuning"
+                                    posisiawal_beadsbawah4 = 140
+                                }else if warnaawalbeadsbawah4444 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah4444 = "beadsAbu"
-                                    posisiawal_beadsbawah4444 = 275 } else { warnaawalbeadsbawah4444 = "beadsKuning"
-                                        posisiawal_beadsbawah4444 = 230
-                                    }
+                                    posisiawal_beadsbawah4444 = 275
+                                    
+                                }
                                 calculateBeads(position: 4)
                                 cekJawaban()
                             }
@@ -572,11 +810,26 @@ struct RelaxModeView2: View {
                             .frame(width:60)
                             .position(x:265, y:posisiawal_beadsbawah3)
                             .onTapGesture {
-                                if warnaawalbeadsbawah3 == "beadsKuning" {
+                                if warnaawalbeadsbawah3 == "beadsAbu" {
+
+                                    warnaawalbeadsbawah3 = "beadsKuning"
+                                    posisiawal_beadsbawah3 = 140
+
+                                }else if warnaawalbeadsbawah3 == "beadsKuning" {
+                                    
                                     warnaawalbeadsbawah3 = "beadsAbu"
-                                    posisiawal_beadsbawah3 = 185 } else { warnaawalbeadsbawah3 = "beadsKuning"
-                                        posisiawal_beadsbawah3 = 140
-                                    }
+                                    posisiawal_beadsbawah3 = 185
+                                    
+                                    warnaawalbeadsbawah33 = "beadsAbu"
+                                    posisiawal_beadsbawah33 = 215
+                                    
+                                    warnaawalbeadsbawah333 = "beadsAbu"
+                                    posisiawal_beadsbawah333 = 245
+                                    
+                                    warnaawalbeadsbawah3333 = "beadsAbu"
+                                    posisiawal_beadsbawah3333 = 275
+                                    
+                                }
                                 calculateBeads(position: 3)
                                 cekJawaban()
                             }
@@ -819,10 +1072,11 @@ struct RelaxModeView2: View {
             .background(.black)
             .navigationBarHidden(true)
             
-            if gusdar == true {
+            if jawabansalah == true {
                 transparentView()
+                    .opacity(0.8)
                     .onTapGesture {
-                        gusdar = false
+                        jawabansalah = false
                         randomSoal()
                         tombolReset()
                     }
@@ -965,8 +1219,8 @@ struct RelaxModeView2: View {
     
 //    functon buat RANDOM ANGKA SOAL, operatornya selalu +
     func randomSoal() {
-        angkaDepan = Int.random(in:1..<100)
-        angkaBelakang = Int.random(in:1..<100)
+        angkaDepan = Int.random(in:1..<1000)
+        angkaBelakang = Int.random(in:1..<1000)
     
         
     }
@@ -975,9 +1229,14 @@ struct RelaxModeView2: View {
         func cekJawaban(){
             
 //            kalo var, dia hasilnya bisa berubah2. kalo let, dia hasilnya tetep ga berubah
+//            ini buat nggabung string2 value posisi 1-7 :: (misal jdi 000105)
             let angkaString = ("\(valuePosisi1)\(valuePosisi2)\(valuePosisi3)\(valuePosisi4)\(valuePosisi5)\(valuePosisi6)\(valuePosisi7)")
             
-            var intAngkaString = Int(angkaString)
+            let contoh = String(valuePosisi1) + String(valuePosisi2)
+            let contoh2 = "\(valuePosisi1)\(valuePosisi2)"
+            
+//            buat ngubah string jdi integer: (0005 jdi 5)
+            let intAngkaString = Int(angkaString)
             
             var jawaban = 0
             
@@ -995,7 +1254,7 @@ struct RelaxModeView2: View {
                 print ("jawaban anda benar")
 //                tampilin transparentView()
 //                gusdar true = buat nampilin halaman CORRECT
-                gusdar = true
+                jawabansalah = true
                 
             }
 

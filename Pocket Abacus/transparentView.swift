@@ -12,7 +12,7 @@ struct transparentView: View {
         ZStack {
             Rectangle()
                 .background(.black)
-                .opacity(0.5)
+                .opacity(0.3)
             Image("correct")
         }
     }

@@ -17,66 +17,43 @@ struct FrontPageView: View {
                 Image("FrontPage")
                 
                 VStack {
-                    
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                    Spacer().frame(height: 60)
                     
                     Image("modesText")
                     
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                    Spacer().frame(height: 60)
                     
                     HStack {
 //                        Tombol Free Mode
                         NavigationLink(destination:FreeModeView()){
                             ZStack {
-                                
-                                
                                 Rectangle()
                                     .foregroundColor(.white)
+                                    .opacity(0.45)
                                     .cornerRadius(20)
+                                    
                                 
                                 Text("Free Mode")
+                                    .foregroundStyle(.yellow)
+                                    .fontWeight(.bold)
                             }
                         }
 //                        Tombol Relax Mode
-                        NavigationLink (destination:RelaxModeView1()) {
+                        NavigationLink (destination:RelaxModeView2()) {
                             ZStack {
                                 Rectangle()
                                     .foregroundColor(.white)
+                                    .opacity(0.45)
                                     .cornerRadius(20)
-                                Text("Relax Mode")
                                 
+                                Text("Relax Mode")
+                                    .foregroundStyle(.yellow)
+                                    .fontWeight(.bold)
                             }
                         }
-                        
-                      
-                    
                     }
-                    
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
                 }
-               
-                
+                .padding()
             }.background(.black)
                 .navigationBarHidden(true)
 //            buat hide navigation bar default
